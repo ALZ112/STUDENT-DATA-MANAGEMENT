@@ -9,7 +9,7 @@ int main()
     int n=0,option=0,count_n=0;
     string empty="00";
     string proctor ="";
-    ifstream f("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt");
+    ifstream f("DATABASE.txt");
     string line;
     for(int i=0;std :: getline(f,line);i++)
     {
@@ -35,7 +35,7 @@ int main()
             for(int i=0;i<n;i++)
             {
                 ofstream outfile;
-                outfile.open("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt",ios :: app);
+                outfile.open("DATABASE.txt",ios :: app);
                 cout<<"Enter your registration number :(7-digit)"<<endl;
                 cin>>data;
                 outfile<<data<<" ";
@@ -58,7 +58,7 @@ int main()
             cin>>regno;
             ifstream infile;
             int check=0;
-            infile.open("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt",ios :: in);
+            infile.open("DATABASE.txt",ios :: in);
             while(infile>>data)
             {
                 if(strcmp(data.c_str(),regno)==0)
@@ -99,7 +99,7 @@ int main()
                 cout<<"You NEED to enter marks for all students"<<endl;
                 for(int i=0;i<count_n;i++)
                 {
-                    fstream file("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt");
+                    fstream file("DATABASE.txt");
                     if(strcmp(subcode.c_str(),code1.c_str())==0)
                     {
                         file.seekp(14+26*i,std::ios_base::beg);
@@ -118,7 +118,7 @@ int main()
             }
             else if(option==2)
             {
-                infile.open("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt",ios::in);
+                infile.open("DATABASE.txt",ios::in);
                 if(strcmp(subcode.c_str(),code1.c_str())==0)
                 {
                     cout<<"Registraion number -- marks"<<endl;
@@ -134,7 +134,7 @@ int main()
                     }
                 }
                 infile.close();
-                infile.open("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt");
+                infile.open("DATABASE.txt");
                 if(strcmp(subcode.c_str(),code2.c_str())==0)
                 {
                     cout<<"Registration Number - Marks"<<endl;
@@ -162,7 +162,7 @@ int main()
                 int check=0;
                 string temp1,temp2,temp3,temp4,id;
                 ifstream infile;
-                infile.open("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt",ios :: in);
+                infile.open("DATABASE.txt",ios :: in);
                 while(infile>>temp1)
                 {
                     infile >> temp2;
@@ -193,7 +193,7 @@ int main()
                 {
                     cout<<"Reg No.\t\tName\tEC305\tEC306\tproctor ID"<<endl;
                     ifstream infile;
-                    infile.open("C:\\Users\\Amogh Prabhu\\Desktop\\CPP\\PROJECTS\\DATABASE.txt",ios::in);
+                    infile.open("DATABASE.txt",ios::in);
                     string data;
                     while(infile>>data)
                     {
